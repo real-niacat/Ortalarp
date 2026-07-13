@@ -1,0 +1,11 @@
+{
+	"id": "ortalarp",
+	"name": "Ortalarp", 
+	"author": ["yvi"], 
+	"description": "Balatro in an alternate universe, for real.",
+	"prefix": "olrp",
+	"main_file": "main.lua",
+	"priority": 0, 
+	"badge_colour": "FFFFFF",
+	"version": "1.0.0", 
+}
