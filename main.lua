@@ -7,14 +7,12 @@ local function mirror_x(x)
     return love.graphics.getWidth() - x
 end
 
-local gxh = love.mouse.getX; function love.mouse.getX() return love.graphics.getWidth() - gxh() end
 
---[[
 local gxh = love.mouse.getX
 function love.mouse.getX()
     return mirror_x(gxh())
 end
-]]
+
 
 local gph = love.mouse.getPosition
 function love.mouse.getPosition()
