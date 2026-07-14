@@ -1,0 +1,18 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "engine/text.lua"
+pattern = '''
+if self.config.text_effect and SMODS.DynaTextEffects[self.config.text_effect] and type(SMODS.DynaTextEffects[self.config.text_effect].func) == "function" then
+    SMODS.DynaTextEffects[self.config.text_effect].func(self, k, letter) -- k is index
+end
+'''
+position = 'after'
+payload = '''
+Ortalarp_text_effect(self, k, letter)
+'''
+match_indent = true
